@@ -1,7 +1,9 @@
 # 📝 Notes App - Tugas 7 PAM
 
 **Nama:** Muhammad Fadhilah Akbar
+
 **NIM:** 123140003
+
 **Mata Kuliah:** IF25-22017 Pengembangan Aplikasi Mobile
 
 ---
@@ -132,7 +134,7 @@ Fitur UI tambahan:
 - Animasi transisi tema (fade in/out)
 - Warna catatan: 5 pilihan (Default, Purple, Teal, Navy, Rose)
 
-### 6. Code Quality (10%)
+### 6. Code Quality
 - **Single Source of Truth** — SQLDelight sebagai satu-satunya sumber data UI
 - **Reactive updates** — `Flow` → `StateFlow` → `collectAsState()` otomatis update UI
 - **Repository/DataSource pattern** — abstraksi layer data terpisah dari ViewModel
@@ -173,20 +175,17 @@ SQLite Database (notes_tugas7.db)
 
 | Screen | Deskripsi |
 |--------|-----------|
-| `screenshot_notelist.png` | Halaman utama — daftar catatan dengan warna berbeda |
-| `screenshot_loading.png` | Loading state — spinner saat pertama kali load |
-| `screenshot_empty.png` | Empty state — belum ada catatan |
-| `screenshot_search.png` | Search aktif — real-time filter judul & isi |
-| `screenshot_search_empty.png` | Search — hasil tidak ditemukan |
-| `screenshot_addnote.png` | Form tambah catatan — pilih warna, isi judul & isi |
-| `screenshot_editnote.png` | Form edit catatan |
-| `screenshot_detail.png` | Detail catatan — aksi edit, hapus, favorit |
-| `screenshot_favorites.png` | Tab Favorit — catatan yang di-bintangi |
-| `screenshot_settings.png` | Settings — toggle dark mode + pilih urutan |
-| `screenshot_darkmode.png` | Dark mode aktif — semua screen berubah tema |
-| `screenshot_drawer.png` | Hamburger drawer — navigasi konsisten |
-| `screenshot_profile.png` | Halaman profil mahasiswa |
-| `screenshot_delete.png` | Dialog konfirmasi hapus catatan |
+| <details><summary><code>screenshot_notelist.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/46db7e7d-6abd-4676-b057-df06499abf5f" /></details> | Halaman utama- daftar catatan dengan warna berbeda |
+| <details><summary><code>screenshot_search.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/a5fdbeae-f831-424c-b0dd-6a955311de56" /></details> | Search aktif -real - time filter judul & isi |
+| <details><summary><code>screenshot_search_empty.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/fc1768a5-b0b0-48b5-a7cb-3964ac9f0072" /></details> | Search - hasil tidak ditemukan |
+| <details><summary><code>screenshot_addnote.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/d24b3156-9092-45ec-99d3-0da44dc1a32e" /></details> | Form tambah catatan - pilih warna, isi judul & isi |
+| <details><summary><code>screenshot_editnote.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/acf20e73-ba05-4d52-94c7-9894fd30fad8" /></details> | Form edit catatan |
+| <details><summary><code>screenshot_detail.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/e47184e4-0a87-4572-b2f9-bedb83e6b998" /></details> | Detail catatan - aksi edit, hapus, favorit |
+| <details><summary><code>screenshot_favorites.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/9cca875e-3ceb-4db8-a63a-07204fdb6f00" /></details> | Tab Favorit - catatan yang disukai |
+| <details><summary><code>screenshot_settings.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/d53c68fd-427e-468a-9949-b9b10ce92539" /></details> | Settings - toggle dark mode + pilih urutan |
+| <details><summary><code>screenshot_drawer.png</code></summary><br><<img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/b8595fda-85d0-4a6e-8c96-2d9172190137" /></details> | Hamburger drawer - navigasi konsisten |
+| <details><summary><code>screenshot_profile.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/66c260da-e6ad-4c75-b947-b007a8614c7c" /></details> | Halaman profil mahasiswa |
+| <details><summary><code>screenshot_delete.png</code></summary><br><img width="300" height="600" alt="Image" src="https://github.com/user-attachments/assets/a2cf23e9-b048-4bf8-9d2b-58794045a9ea" /></details> | Dialog konfirmasi hapus catatan |
 
 ---
 
@@ -194,9 +193,8 @@ SQLite Database (notes_tugas7.db)
 
 | Fitur | Preview | Keterangan |
 | :--- | :--- | :--- |
-| **Video Demo** | [▶️ Tonton Video Demo (Google Drive)](https://drive.google.com/your-link-here) | `demo_week7.mp4` (≤ 45 detik) |
+| **Video Demo** | [▶️ Tonton Video Demo (Google Drive)](https://drive.google.com/file/d/1FxnQg6GW3ZixMW0y7Ed9OuOrwZzWyHyl/view?usp=drivesdk) | `demo_week7.mp4`  |
 
-> Video menunjukkan: Tambah catatan → tutup app → buka lagi (data masih ada / offline-first) → Search → Ganti tema di Settings → Toggle favorit → Edit catatan → Hapus catatan
 
 ---
 
@@ -253,7 +251,7 @@ sqldelight {
 ## 📊 Pemenuhan Rubrik Penilaian
 
 | Komponen | Implementasi |
-|---|--|---|
+|---|---|
 | **SQLDelight Setup** | Plugin ditambahkan, `Note.sq` dengan 10+ queries, `DatabaseDriverFactory` expect/actual, `AndroidSqliteDriver` di androidMain |
 | **CRUD Operations** | Create (`insert`), Read (`selectAll` sebagai Flow), Update (`update`), Delete (`delete`) — semua operasi berfungsi dan persisten |
 | **DataStore Settings**  | `SettingsManager` dengan `multiplatform-settings`, dark mode + sort order tersimpan dan diterapkan, UI settings screen lengkap |
